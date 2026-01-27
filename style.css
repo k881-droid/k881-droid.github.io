@@ -38,8 +38,9 @@
 }
 
 body{
-    display: grid; 
-    height: 100vh;
+    block-size: 100vh;
+	display: grid;
+    grid-template-rows: min-content 1fr; 
     color: var(--black);
     background-color: var(--background);
 }
