@@ -9,9 +9,9 @@
 
 @font-face {
   font-family: 'Satoshi-Regular';
-  src: url('fonts/Satoshi-Regular.woff2') format('woff2'),
-       url('fonts/Satoshi-Regular.woff') format('woff'),
-       url('fonts/Satoshi-Regular.ttf') format('truetype');
+  src: url('fonts/Satoshi-Variable.woff2') format('woff2'),
+       url('fonts/Satoshi-Variable.woff') format('woff'),
+       url('fonts/Satoshi-Variable.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -28,12 +28,13 @@
 }
 
 :root{
-    --pink: rgb(255, 56, 152);
+    /* --pink: rgb(255, 56, 152); */
     --background: #ffffff;
-    --yellow: #f9ff4b;
+    /* --yellow: #f9ff4b; */
     --green: #75fe66;
     --black: #111111;
     --spacing: 2rem;
+    --morespacing: 4rem;
     font-family: 'JetBrainsMono-Regular';
 }
 
@@ -46,14 +47,18 @@ body{
 }
 
 main{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
+    align-content: center;
 }
+
 main p{
-    padding: var(--spacing);
+    padding: var(--morespacing);
 }
 
 ul{
-    padding-inline: calc(var(--spacing)*2);
+    padding-inline: var(--morespacing);
 }
 
 em{
@@ -68,10 +73,10 @@ header{
     font-family: 'Satoshi-regular';
     font-size: var(--spacing);
     background: var(--green);
-    padding: var(--spacing);
+    padding: var(--morespacing);
 }
 
 footer{
    background-color: var(--green);
-   padding: var(--spacing);
+   padding: var(--morespacing);
 }
