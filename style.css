@@ -28,25 +28,36 @@
 }
 
 :root{
-    --color: rgb(255, 56, 152);
+    --pink: rgb(255, 56, 152);
     --background: #ffffff;
+    --yellow: #f9ff4b;
+    --green: #59f731;
     --spacing: 2rem;
     font-family: 'JetBrainsMono-Regular';
 }
 
 body{
-    color: var(--color);
+    color: var(--pink);
     background-color: var(--background);
+}
+
+body p{
     padding: var(--spacing);
 }
 
 em{
     font-family: 'Phosphe`ne Font';
-    src: url('fonts/PhospheneFont-Regular.woff') format('woff2'),
-        url('fonts/PhospheneFont-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+}
+
+.highlight{
+    color: var(--green);
+}
+
+header{
+    font-family: 'Satoshi-regular';
+    font-size: var(--spacing);
+    background: var(--yellow);
+    padding: var(--spacing);
 }
 
 footer{
