@@ -31,13 +31,16 @@
     --pink: rgb(255, 56, 152);
     --background: #ffffff;
     --yellow: #f9ff4b;
-    --green: #59f731;
+    --green: #75fe66;
+    --black: #111111;
     --spacing: 2rem;
     font-family: 'JetBrainsMono-Regular';
 }
 
 body{
-    color: var(--pink);
+    display: grid; 
+    height: 100vh;
+    color: var(--black);
     background-color: var(--background);
 }
 
@@ -60,11 +63,10 @@ span {
 header{
     font-family: 'Satoshi-regular';
     font-size: var(--spacing);
-    background: var(--yellow);
+    background: var(--green);
     padding: var(--spacing);
 }
 
 footer{
-    /* color: var(--background);
-    background-color: var(--color); */
+   background-color: var(--green);
 }
