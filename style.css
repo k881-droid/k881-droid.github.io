@@ -45,12 +45,16 @@ body p{
     padding: var(--spacing);
 }
 
+ul{
+    padding-inline:  calc(var(--spacing)*2);
+}
+
 em{
     font-family: 'Phosphe`ne Font';
 }
 
-.highlight{
-    color: var(--green);
+span {
+    text-decoration: underline;
 }
 
 header{
