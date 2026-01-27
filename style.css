@@ -40,24 +40,27 @@
 body{
     block-size: 100vh;
 	display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
     color: var(--black);
     background-color: var(--background);
 }
 
-body p{
+main{
+    align-items: center;
+}
+main p{
     padding: var(--spacing);
 }
 
 ul{
-    padding-inline:  calc(var(--spacing)*2);
+    padding-inline: calc(var(--spacing)*2);
 }
 
 em{
     font-family: 'Phosphe`ne Font';
 }
 
-span {
+span{
     text-decoration: underline;
 }
 
@@ -70,4 +73,5 @@ header{
 
 footer{
    background-color: var(--green);
+   padding: var(--spacing);
 }
