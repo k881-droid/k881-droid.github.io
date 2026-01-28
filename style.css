@@ -70,6 +70,17 @@ ul{
 ul li{
     text-align: center;
 }
+
+a{
+    color: var(--black);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--green);
+    text-decoration: underline;
+}
+
 em{
     font-family: 'Phosphe`ne Font';
 }
