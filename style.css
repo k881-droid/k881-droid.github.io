@@ -71,12 +71,12 @@ ul li{
     text-align: center;
 }
 
-a{
+main a{
     color: var(--black);
     text-decoration: none;
 }
 
-a:hover{
+main a:hover{
     color: var(--green);
     text-decoration: underline;
 }
@@ -90,7 +90,7 @@ span{
 }
 
 header{
-    font-family: 'Satoshi-regular';
+    font-family: "Inter", sans-serif;
     font-size: var(--spacing);
     background: var(--green);
     padding: var(--morespacing);
@@ -99,5 +99,28 @@ header{
 footer{
    background-color: var(--green);
    padding: var(--morespacing);
+    font-family: "Inter", sans-serif;
+}
+
+@media (width < 800px){
+
+    ul {
+        font-size: calc(var(--spacing)*0.75);
+        margin-inline: auto;
+    }
+
+    main p{
+        text-align: center;
+    }
+
+    header{
+        text-align: center;
+    }
+
+    footer{
+        text-align: center;
+        font-size: calc(var(--spacing)*0.75);
+    }
+
 }
 
