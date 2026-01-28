@@ -24,7 +24,12 @@ This Font Software is licensed under the SIL Open Font License, Version 1.1 . Th
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
 
 ### Phosphene 
+By Jeanne Saliou
 
+This font can be found at: https://uncut.wtf/display/phosphene/ 
 
+SIL Open Font License 1.1
 
+This license allows Commercial use, Modifying and Redistribution. If you modify or redistribute it, there are some extra rules to follow.
 
+This is just a super-short summary, not real legal advice. Make sure to read the full license here: https://openfontlicense.org/
