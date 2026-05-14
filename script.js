@@ -9,15 +9,8 @@ window.addEventListener('scroll', () => {
     let scrolled = window.scrollY - sceneTop
     let progress = scrolled / sceneHeight
 
-    // stage 1: grow — triggers as soon as scene starts
-    if (progress >= 0) {
-        splitWrapper.classList.add('is-growing')
-    } else {
-        splitWrapper.classList.remove('is-growing')
-    }
-
-    // stage 2: split — waits until 35% so grow CSS transition finishes first
-    if (progress >= 0.35) {
+    // split head open after scrolling 25% into the scene
+    if (progress >= 0.25) {
         splitWrapper.classList.add('is-split')
     } else {
         splitWrapper.classList.remove('is-split')
