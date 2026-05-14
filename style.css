@@ -21,6 +21,15 @@ body {
 
 .scroll-scene {
     block-size: 400vh;
+    position: relative;
+}
+
+/* sentinel element — sits one viewport down, triggers the split animation */
+.split-trigger {
+    position: absolute;
+    inset-block-start: 100vh;
+    block-size: 1px;
+    inline-size: 100%;
 }
 
 .scroll-sticky {
