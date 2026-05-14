@@ -61,10 +61,12 @@ body {
 }
 
 .top-half {
+    transform: translateY(0);
     transition: transform 0.6s ease;
 }
 
 .bottom-half {
+    transform: translateY(0);
     transition: transform 0.6s ease;
 }
 
