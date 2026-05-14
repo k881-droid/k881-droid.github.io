@@ -162,6 +162,58 @@ body {
     letter-spacing: -0.05rem;
 }
 
+/* === SPLIT SECTION === */
+
+.split-scene {
+    block-size: 300vh;
+}
+
+.split-sticky {
+    position: sticky;
+    inset-block-start: 0;
+    block-size: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.split-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.half {
+    overflow: hidden;
+    block-size: 8rem;
+}
+
+.top-half img {
+    block-size: 16rem;
+    width: auto;
+    display: block;
+}
+
+.bottom-half img {
+    block-size: 16rem;
+    width: auto;
+    display: block;
+    margin-block-start: -8rem;
+}
+
+.top-half,
+.bottom-half {
+    transition: transform 0.8s ease;
+}
+
+.split-wrapper.is-open .top-half {
+    transform: translateY(-6rem);
+}
+
+.split-wrapper.is-open .bottom-half {
+    transform: translateY(6rem);
+}
+
 @media (width > 768px) {
     .hero {
         padding-inline: 2rem;
