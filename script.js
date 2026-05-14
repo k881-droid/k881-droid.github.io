@@ -1,7 +1,7 @@
-let splitScene = document.querySelector('.split-scene')
+let scrollScene = document.querySelector('.scroll-scene')
 let splitWrapper = document.querySelector('.split-wrapper')
 
-// IntersectionObserver to add/remove a class — learnt from class site
+// IntersectionObserver to trigger head split — learnt from class site
 let splitObserver = new IntersectionObserver(([entry]) => {
     if (entry.isIntersecting) {
         splitWrapper.classList.add('is-open')
@@ -9,7 +9,7 @@ let splitObserver = new IntersectionObserver(([entry]) => {
         splitWrapper.classList.remove('is-open')
     }
 }, {
-    rootMargin: '0% 0% -30% 0%', // fires a little after section enters view
+    rootMargin: '0% 0% -60% 0%', // fires once user has scrolled well into the scene
 })
 
-splitObserver.observe(splitScene)
+splitObserver.observe(scrollScene)
