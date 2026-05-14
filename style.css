@@ -68,31 +68,30 @@ body {
     transform: scale(1);
 }
 
-/* clipping containers — each shows exactly half the image */
-/* image is 287x259, at 28rem wide natural height = 25.3rem, each half = 12.65rem */
+/* clipping containers — height only, width stays natural (never touch inline-size) */
 .top-half {
     overflow: hidden;
-    block-size: 12.65rem;
+    block-size: 13rem;
     transition: transform 0.6s ease;
 }
 
 .bottom-half {
     overflow: hidden;
-    block-size: 12.65rem;
+    block-size: 13rem;
     transition: transform 0.6s ease;
 }
 
 .top-half img {
-    inline-size: 28rem;
-    height: auto;
+    block-size: 26rem;
+    width: auto;
     display: block;
 }
 
 .bottom-half img {
-    inline-size: 28rem;
-    height: auto;
+    block-size: 26rem;
+    width: auto;
     display: block;
-    margin-block-start: -12.65rem; /* shifts image up so bottom half is visible */
+    margin-block-start: -13rem;
 }
 
 /* stage 2: split — only triggers after grow is complete (see JS thresholds) */
