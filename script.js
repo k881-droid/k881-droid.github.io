@@ -16,8 +16,8 @@ window.addEventListener('scroll', () => {
         splitWrapper.classList.remove('is-growing')
     }
 
-    // stage 2: split (30–70%)
-    if (progress >= 0.3) {
+    // stage 2: split (15–70%)
+    if (progress >= 0.15) {
         splitWrapper.classList.add('is-split')
     } else {
         splitWrapper.classList.remove('is-split')

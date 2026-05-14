@@ -98,11 +98,11 @@ body {
 
 /* stage 2: split open */
 .split-wrapper.is-split .top-half {
-    transform: translateY(-6rem);
+    transform: translateY(-10rem);
 }
 
 .split-wrapper.is-split .bottom-half {
-    transform: translateY(6rem);
+    transform: translateY(10rem);
 }
 
 /* === DESKTOP === */
