@@ -1,5 +1,6 @@
 let scrollScene = document.querySelector('.scroll-scene')
-let splitWrapper = document.querySelector('.split-wrapper')
+let topHalf = document.querySelector('.top-half')
+let bottomHalf = document.querySelector('.bottom-half')
 
 // Scroll listener — adds/removes classes only, CSS handles all animation
 // learnt from class site
@@ -9,10 +10,11 @@ window.addEventListener('scroll', () => {
     let scrolled = window.scrollY - sceneTop
     let progress = scrolled / sceneHeight
 
-    // split head open after scrolling 25% into the scene
     if (progress >= 0.25) {
-        splitWrapper.classList.add('is-split')
+        topHalf.classList.add('is-split')
+        bottomHalf.classList.add('is-split')
     } else {
-        splitWrapper.classList.remove('is-split')
+        topHalf.classList.remove('is-split')
+        bottomHalf.classList.remove('is-split')
     }
 })

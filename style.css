@@ -60,39 +60,39 @@ body {
     align-items: center;
 }
 
+/* both source images are 512px tall — same block-size keeps seam aligned */
 .top-half {
+    text-align: center;
     transform: translateY(0);
     transition: transform 0.6s ease;
 }
 
 .bottom-half {
+    margin-block-start: -2rem;
     transform: translateY(0);
     transition: transform 0.6s ease;
 }
 
-/* same image used twice — clip-path cuts cleanly, alignment always perfect */
-/* top 30% = just hair/skull, bottom 70% = face */
 .top-half img {
-    block-size: 26rem;
-    width: auto;
     display: block;
-    clip-path: inset(0 0 75% 0);
+    inline-size: 57.5%;
+    block-size: auto;
+    margin-inline: auto;
 }
 
 .bottom-half img {
-    block-size: 26rem;
-    width: auto;
     display: block;
-    clip-path: inset(25% 0 0 0);
-    margin-block-start: -6.5rem; /* 25% of 26rem pulls bottom flush with top */
+    inline-size: 75%;
+    block-size: auto;
+    margin-inline: auto;
 }
 
-/* stage: split open */
-.split-wrapper.is-split .top-half {
+/* stage: split open — class added directly on each half by JS */
+.top-half.is-split {
     transform: translateY(-10rem);
 }
 
-.split-wrapper.is-split .bottom-half {
+.bottom-half.is-split {
     transform: translateY(10rem);
 }
 
