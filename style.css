@@ -59,34 +59,49 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: scale(0.3);
+    transform: scale(0.4);
     transition: transform 0.6s ease;
 }
 
-.top-half,
-.bottom-half {
-    transition: transform 0.6s ease;
-}
-
-.top-half img,
-.bottom-half img {
-    inline-size: 18rem;
-    height: auto;
-    display: block;
-}
-
-/* stage 1: grow */
+/* stage 1: grow to full size */
 .split-wrapper.is-growing {
     transform: scale(1);
 }
 
-/* stage 2: split open — top goes up, bottom goes down */
+/* clipping containers — each shows exactly half the image */
+/* image is 287x259, at 28rem wide natural height = 25.3rem, each half = 12.65rem */
+.top-half {
+    overflow: hidden;
+    block-size: 12.65rem;
+    transition: transform 0.6s ease;
+}
+
+.bottom-half {
+    overflow: hidden;
+    block-size: 12.65rem;
+    transition: transform 0.6s ease;
+}
+
+.top-half img {
+    inline-size: 28rem;
+    height: auto;
+    display: block;
+}
+
+.bottom-half img {
+    inline-size: 28rem;
+    height: auto;
+    display: block;
+    margin-block-start: -12.65rem; /* shifts image up so bottom half is visible */
+}
+
+/* stage 2: split — only triggers after grow is complete (see JS thresholds) */
 .split-wrapper.is-split .top-half {
-    transform: translateY(-10rem);
+    transform: translateY(-14rem);
 }
 
 .split-wrapper.is-split .bottom-half {
-    transform: translateY(10rem);
+    transform: translateY(14rem);
 }
 
 /* === DESKTOP === */
