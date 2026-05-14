@@ -1,128 +1,14 @@
 /* OLD STYLES COMMENTED OUT
-@font-face {
-    font-family: 'Phosphe`ne Font';
-    src: url('fonts/PhospheneFont-Regular.woff2') format('woff2'),
-        url('fonts/HealTheWebA-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-  font-family: 'Satoshi-Regular';
-  src: url('fonts/Satoshi-Variable.woff2') format('woff2'),
-       url('fonts/Satoshi-Variable.woff') format('woff'),
-       url('fonts/Satoshi-Variable.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'JetBrainsMono-Regular';
-  src: url('fonts/JetBrainsMono-Variable.woff2') format('woff2'),
-       url('fonts/JetBrainsMono-Variable.woff') format('woff'),
-       url('fonts/JetBrainsMono-Variable.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-
-:root{
-    --background: #ffffff;
-    --green: #75fe66;
-    --black: #111111;
-    --spacing: 2rem;
-    --morespacing: 4rem;
-    font-family: 'JetBrainsMono-Regular';
-    --heart-size: calc(var(--morespacing) * 5);
-}
-
-body{
-    block-size: 100vh;
-    display: grid;
-    grid-template-rows: 1fr 4fr 1fr;
-    color: var(--black);
-    background-color: var(--background);
-}
-
-main{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    align-items: center;
-    align-content: center;
-}
-
-main p{
-    padding: var(--morespacing);
-}
-
-ul{
-    max-width: calc(var(--morespacing) * 4);
-    display: grid;
-    justify-content: center;
-    padding: var(--spacing);
-    border: calc(var(--spacing) / 8) dotted var(--green);
-    margin-inline: var(--morespacing);
-}
-
-ul li{
-    text-align: center;
-}
-
-main a{
-    color: var(--black);
-    text-decoration: none;
-}
-
-main a:hover{
-    color: var(--green);
-    text-decoration: underline;
-}
-
-em{
-    font-family: 'Phosphe`ne Font';
-}
-
-span{
-    text-decoration: underline;
-}
-
-header{
-    font-family: "Inter", sans-serif;
-    font-size: var(--spacing);
-    background: var(--green);
-    padding: var(--morespacing);
-}
-
-footer{
-   background-color: var(--green);
-   padding: var(--morespacing);
-    font-family: "Inter", sans-serif;
-}
-
-@media (width < 800px){
-    ul {
-        font-size: calc(var(--spacing)*0.75);
-        margin-inline: auto;
-    }
-
-    main p{
-        text-align: center;
-    }
-
-    header{
-        text-align: center;
-    }
-
-    footer{
-        text-align: center;
-        font-size: calc(var(--spacing)*0.75);
-    }
-}
+@font-face { font-family: 'Phosphe`ne Font'; src: url('fonts/PhospheneFont-Regular.woff2') format('woff2'), url('fonts/HealTheWebA-Regular.woff') format('woff'); }
+@font-face { font-family: 'Satoshi-Regular'; src: url('fonts/Satoshi-Variable.woff2') format('woff2'), url('fonts/Satoshi-Variable.woff') format('woff'), url('fonts/Satoshi-Variable.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'JetBrainsMono-Regular'; src: url('fonts/JetBrainsMono-Variable.woff2') format('woff2'), url('fonts/JetBrainsMono-Variable.woff') format('woff'), url('fonts/JetBrainsMono-Variable.ttf') format('truetype'); font-weight: 400; }
+:root { --background: #ffffff; --green: #75fe66; --black: #111111; --spacing: 2rem; --morespacing: 4rem; font-family: 'JetBrainsMono-Regular'; }
+body { block-size: 100vh; display: grid; grid-template-rows: 1fr 4fr 1fr; }
+header { font-family: "Inter", sans-serif; font-size: var(--spacing); background: var(--green); padding: var(--morespacing); }
+footer { background-color: var(--green); padding: var(--morespacing); font-family: "Inter", sans-serif; }
 END OLD STYLES */
 
-/* === HERO SECTION === */
+/* === BASE === */
 
 body {
     font-family: 'Inter', sans-serif;
@@ -131,45 +17,41 @@ body {
     margin: 0;
 }
 
-.hero {
+/* === SCROLL SCENE — one tall section, everything happens here === */
+
+.scroll-scene {
+    block-size: 400vh;
+}
+
+.scroll-sticky {
+    position: sticky;
+    inset-block-start: 0;
     block-size: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: space-between;
+    padding-block: 2rem;
     padding-inline: 1.5rem;
-    padding-block: 1.5rem;
-    gap: 1rem;
+    text-align: center;
 }
 
-.hero-title {
+/* === TYPOGRAPHY === */
+
+.title {
     font-size: 2.2rem;
     font-weight: 500;
     letter-spacing: -0.15rem;
     line-height: 1.2;
 }
 
-.hero-scroll {
+.scroll-hint {
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: -0.05rem;
 }
 
-/* === SPLIT SECTION === */
-
-.split-scene {
-    block-size: 300vh;
-}
-
-.split-sticky {
-    position: sticky;
-    inset-block-start: 0;
-    block-size: 100svh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* === SPLIT HEAD === */
 
 .split-wrapper {
     display: flex;
@@ -195,6 +77,8 @@ body {
     margin-block-start: -8rem;
 }
 
+/* === SPLIT ANIMATION — triggered by JS adding .is-open === */
+
 .top-half,
 .bottom-half {
     transition: transform 0.8s ease;
@@ -208,24 +92,42 @@ body {
     transform: translateY(6rem);
 }
 
+/* === DESKTOP === */
+
 @media (width > 768px) {
-    .hero {
+    .scroll-sticky {
+        padding-block: 3rem;
         padding-inline: 2rem;
-        padding-block: 2rem;
-        gap: 1.5rem;
     }
 
-    .hero-title {
+    .title {
         font-size: 3.8rem;
         letter-spacing: -0.27rem;
     }
 
-    .hero-photo {
+    .scroll-hint {
+        font-size: 1.7rem;
+        letter-spacing: -0.1rem;
+    }
+
+    .half {
+        block-size: 11rem;
+    }
+
+    .top-half img,
+    .bottom-half img {
         block-size: 22rem;
     }
 
-    .hero-scroll {
-        font-size: 1.7rem;
-        letter-spacing: -0.1rem;
+    .bottom-half img {
+        margin-block-start: -11rem;
+    }
+
+    .split-wrapper.is-open .top-half {
+        transform: translateY(-9rem);
+    }
+
+    .split-wrapper.is-open .bottom-half {
+        transform: translateY(9rem);
     }
 }
