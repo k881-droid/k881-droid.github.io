@@ -89,11 +89,11 @@ body {
 
 /* stage: split open — class added directly on each half by JS */
 .top-half.is-split {
-    transform: translateY(-10rem);
+    transform: translateY(-12rem);
 }
 
 .bottom-half.is-split {
-    transform: translateY(10rem);
+    transform: translateY(12rem);
 }
 
 /* === DESKTOP === */

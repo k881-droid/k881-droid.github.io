@@ -2,9 +2,8 @@ let scrollScene = document.querySelector('.scroll-scene')
 let topHalf = document.querySelector('.top-half')
 let bottomHalf = document.querySelector('.bottom-half')
 
-// Scroll listener — adds/removes classes only, CSS handles all animation
-// learnt from class site
-window.addEventListener('scroll', () => {
+// checks scroll position and adds/removes split class — learnt from class site
+function checkSplit() {
     let sceneTop = scrollScene.offsetTop
     let sceneHeight = scrollScene.offsetHeight
     let scrolled = window.scrollY - sceneTop
@@ -17,4 +16,7 @@ window.addEventListener('scroll', () => {
         topHalf.classList.remove('is-split')
         bottomHalf.classList.remove('is-split')
     }
-})
+}
+
+window.addEventListener('scroll', checkSplit)
+checkSplit() // run once on load to set correct initial state
