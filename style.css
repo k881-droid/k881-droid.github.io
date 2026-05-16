@@ -314,5 +314,11 @@ body {
 
     .projects {
         flex-direction: row;
+        gap: 0;
+    }
+
+    .project-card {
+        inline-size: 20rem;
+        margin-inline-end: -3rem;
     }
 }
