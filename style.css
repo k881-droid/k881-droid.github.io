@@ -224,6 +224,10 @@ body {
         inline-size: 75%;
     }
 
+    .bio-text {
+        display: block;
+    }
+
     .projects {
         flex-direction: row;
     }
