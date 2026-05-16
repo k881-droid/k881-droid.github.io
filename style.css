@@ -70,23 +70,40 @@ body {
 }
 
 .bottom-half {
-    margin-block-start: -6rem;
+    margin-block-start: -4.8rem;
     transform: translateY(0);
     transition: transform 0.6s ease;
 }
 
 .top-half img {
     display: block;
-    inline-size: 57.5%;
+    inline-size: 90%;
     block-size: auto;
     margin-inline: auto;
 }
 
 .bottom-half img {
     display: block;
-    inline-size: 75%;
+    inline-size: 90%;
     block-size: auto;
     margin-inline: auto;
+}
+
+/* bio text — hidden in the gap, fades in when head splits */
+.bio-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: -0.05rem;
+    line-height: 1.3;
+    text-align: center;
+    max-inline-size: 18rem;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    margin-block: 0;
+}
+
+.bio-text.is-split {
+    opacity: 1;
 }
 
 /* stage: split open — class added directly on each half by JS */
@@ -104,9 +121,33 @@ body {
     opacity: 0;
 }
 
+/* === TABLET === */
+
+@media (width > 480px) and (width < 1024px) {
+    .top-half img {
+        inline-size: 70%;
+    }
+
+    .bottom-half img {
+        inline-size: 80%;
+    }
+
+    .bottom-half {
+        margin-block-start: -7rem;
+    }
+
+    .top-half.is-split {
+        transform: translateY(-18rem);
+    }
+
+    .bottom-half.is-split {
+        transform: translateY(18rem);
+    }
+}
+
 /* === DESKTOP === */
 
-@media (width > 768px) {
+@media (width > 1024px) {
     .scroll-sticky {
         padding-block: 3rem;
         padding-inline: 2rem;
@@ -120,5 +161,17 @@ body {
     .scroll-hint {
         font-size: 1.7rem;
         letter-spacing: -0.1rem;
+    }
+
+    .top-half img {
+        inline-size: 55%;
+    }
+
+    .bottom-half img {
+        inline-size: 75%;
+    }
+
+    .bottom-half {
+        margin-block-start: -9.8rem;
     }
 }
