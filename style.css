@@ -147,6 +147,7 @@ body {
     flex-direction: column;
     gap: 0.5rem;
     opacity: 0;
+    pointer-events: none;
     transition: opacity var(--speed) ease 0.3s;
 }
 
@@ -214,6 +215,7 @@ body {
 
 .projects.is-split {
     opacity: 1;
+    pointer-events: auto;
 }
 
 /* stage: split open — class added directly on each half by JS */
