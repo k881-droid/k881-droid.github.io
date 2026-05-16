@@ -265,16 +265,16 @@ body {
 }
 
 .cursor-tooltip-name {
-    font-size: 0.75rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    letter-spacing: -0.02rem;
+    letter-spacing: -0.05rem;
     margin-block: 0;
 }
 
 .cursor-tooltip-desc {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     font-weight: 400;
-    letter-spacing: -0.02rem;
+    letter-spacing: -0.05rem;
     margin-block: 0;
 }
 
