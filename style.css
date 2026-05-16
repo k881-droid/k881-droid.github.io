@@ -100,7 +100,7 @@ body {
 }
 
 .bottom-half {
-    margin-block-start: clamp(-9.8rem, -11vw, -4.8rem);
+    margin-block-start: -4.8rem;
     transform: translateY(0);
     transition: transform var(--speed) ease;
 }
@@ -237,6 +237,14 @@ body {
     opacity: 0;
 }
 
+/* === BETWEEN MOBILE AND DESKTOP === */
+
+@media (width > 317px) and (width < 768px) {
+    .bottom-half {
+        margin-block-start: -3.5rem;
+    }
+}
+
 /* === TABLET === */
 
 /* @media (width > 480px) and (width < 1024px) {
@@ -278,6 +286,10 @@ body {
     .scroll-hint {
         font-size: 1.7rem;
         letter-spacing: -0.1rem;
+    }
+
+    .bottom-half {
+        margin-block-start: -9.6rem;
     }
 
     .top-half img {
