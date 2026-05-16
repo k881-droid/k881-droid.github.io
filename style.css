@@ -60,6 +60,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 /* both source images are 512px tall — same block-size keeps seam aligned */
@@ -103,6 +104,40 @@ body {
 }
 
 .bio-text.is-split {
+    opacity: 1;
+}
+
+/* project cards — absolutely positioned at the split line, fan out of the head */
+.projects {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.6s ease 0.3s;
+}
+
+.project-card {
+    block-size: 9rem;
+    inline-size: 6rem;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-block-end: 0.5rem;
+    font-size: 0.65rem;
+    letter-spacing: -0.02rem;
+}
+
+/* each card fans out at a different angle — like spilling out of the skull */
+#manuscript { transform: rotate(-15deg); }
+#spread     { transform: rotate(-5deg); }
+#binding    { transform: rotate(5deg); }
+#links      { transform: rotate(15deg); }
+
+.projects.is-split {
     opacity: 1;
 }
 
