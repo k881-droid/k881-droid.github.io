@@ -125,11 +125,23 @@ body {
     inline-size: 6rem;
     background-color: #f0f0f0;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-block-end: 0.5rem;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.project-card video {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card span {
     font-size: 0.65rem;
     letter-spacing: -0.02rem;
+    text-align: center;
+    padding-block: 0.25rem;
+    background-color: #ffffff;
 }
 
 /* each card fans out at a different angle — like spilling out of the skull */
@@ -137,6 +149,7 @@ body {
 #spread     { transform: rotate(-5deg); }
 #binding    { transform: rotate(5deg); }
 #links      { transform: rotate(15deg); }
+#functions  { transform: rotate(25deg); }
 
 .projects.is-split {
     opacity: 1;
