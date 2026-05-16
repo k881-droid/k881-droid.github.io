@@ -133,11 +133,10 @@ body {
     visibility: hidden;
     display: none;
     position: absolute;
-    inset-block-start: 50%;
+    inset-block-start: 60%;
     inset-inline-start: 50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 10;
-    inset-block-start: 60%;
 }
 
 .bio-text.is-split {
@@ -244,6 +243,40 @@ body {
     opacity: 0;
 }
 
+/* === CORNER LINKS === */
+
+.corner-link {
+    position: fixed;
+    inset-block-start: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.05rem;
+    text-decoration: none;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 100;
+}
+
+.corner-link--left {
+    inset-inline-start: 1.5rem;
+}
+
+.corner-link--right {
+    inset-inline-end: 1.5rem;
+}
+
+.corner-reveal {
+    opacity: 0;
+    transition: opacity var(--speed) ease;
+}
+
+.corner-link:hover .corner-reveal {
+    opacity: 1;
+}
+
 /* === CURSOR TOOLTIP — learnt from https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tooltip_role === */
 
 .cursor-tooltip {
@@ -336,7 +369,7 @@ body {
     }
 
     .bottom-half {
-        margin-block-start: -5rem;
+        margin-block-start: -6.8rem;
     }
 
     .top-half img {
