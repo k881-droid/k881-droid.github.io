@@ -35,3 +35,26 @@ function checkSplit() {
 
 window.addEventListener('scroll', checkSplit)
 checkSplit() // run once on load to set correct initial state
+
+// cursor tooltip — learnt from https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tooltip_role
+let tooltip = document.querySelector('.cursor-tooltip')
+let tooltipName = document.querySelector('.cursor-tooltip-name')
+let tooltipDesc = document.querySelector('.cursor-tooltip-desc')
+let cards = document.querySelectorAll('.project-card')
+
+cards.forEach(function(card) {
+    card.addEventListener('mouseenter', function() {
+        tooltipName.textContent = card.querySelector('.card-name').textContent
+        tooltipDesc.textContent = card.querySelector('.card-desc').textContent
+        tooltip.classList.add('is-active')
+    })
+
+    card.addEventListener('mousemove', function(e) {
+        tooltip.style.setProperty('--x', e.clientX + 16 + 'px')
+        tooltip.style.setProperty('--y', e.clientY + 16 + 'px')
+    })
+
+    card.addEventListener('mouseleave', function() {
+        tooltip.classList.remove('is-active')
+    })
+})

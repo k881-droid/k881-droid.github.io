@@ -244,6 +244,40 @@ body {
     opacity: 0;
 }
 
+/* === CURSOR TOOLTIP — learnt from https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tooltip_role === */
+
+.cursor-tooltip {
+    position: fixed;
+    inset-block-start: var(--y, 0);
+    inset-inline-start: var(--x, 0);
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    padding-block: 0.4rem;
+    padding-inline: 0.75rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    display: none;
+}
+
+.cursor-tooltip.is-active {
+    opacity: 1;
+}
+
+.cursor-tooltip-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: -0.02rem;
+    margin-block: 0;
+}
+
+.cursor-tooltip-desc {
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: -0.02rem;
+    margin-block: 0;
+}
+
 /* === BETWEEN MOBILE AND DESKTOP === */
 
 @media (width < 317px){
@@ -324,6 +358,10 @@ body {
 
     .card-overlay {
         display: none;
+    }
+
+    .cursor-tooltip {
+        display: block;
     }
 
     .projects {
