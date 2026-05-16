@@ -153,6 +153,7 @@ body {
 .project-card {
     inline-size: var(--card-width);
     aspect-ratio: 16 / 9;
+    text-decoration: none;
     background-color: var(--color-surface);
     display: flex;
     flex-direction: column;
@@ -167,7 +168,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     padding: 0.4rem;
+    text-align: center;
 }
 
 .card-name {
