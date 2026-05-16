@@ -70,7 +70,7 @@ body {
 }
 
 .bottom-half {
-    margin-block-start: -4.8rem;
+    margin-block-start: clamp(-9.8rem, -11vw, -4.8rem);
     transform: translateY(0);
     transition: transform 0.6s ease;
 }
@@ -108,11 +108,11 @@ body {
 
 /* stage: split open — class added directly on each half by JS */
 .top-half.is-split {
-    transform: translateY(-15rem);
+    transform: translateY(clamp(-22rem, -20vw, -15rem));
 }
 
 .bottom-half.is-split {
-    transform: translateY(15rem);
+    transform: translateY(clamp(15rem, 20vw, 22rem));
 }
 
 /* text fades out when head splits */
@@ -123,9 +123,9 @@ body {
 
 /* === TABLET === */
 
-@media (width > 480px) and (width < 1024px) {
+/* @media (width > 480px) and (width < 1024px) {
     .top-half img {
-        inline-size: 70%;
+        inline-size: 80%;
     }
 
     .bottom-half img {
@@ -133,7 +133,7 @@ body {
     }
 
     .bottom-half {
-        margin-block-start: -7rem;
+        margin-block-start: -4.5rem;
     }
 
     .top-half.is-split {
@@ -143,11 +143,11 @@ body {
     .bottom-half.is-split {
         transform: translateY(18rem);
     }
-}
+} */
 
 /* === DESKTOP === */
 
-@media (width > 1024px) {
+@media (width > 768px) {
     .scroll-sticky {
         padding-block: 3rem;
         padding-inline: 2rem;
@@ -171,7 +171,4 @@ body {
         inline-size: 75%;
     }
 
-    .bottom-half {
-        margin-block-start: -9.8rem;
-    }
 }
