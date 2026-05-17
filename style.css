@@ -34,7 +34,7 @@ body {
     margin-inline: 0;
 }
 
-/* === SCROLL SCENE — one tall section, everything happens here === */
+/* scroll — one tall section, everything happens here */
 
 .scroll-scene {
     block-size: 400vh;
@@ -43,7 +43,6 @@ body {
 
 .scroll-sticky {
     position: sticky;
-    /* also acts as positioning parent for absolutely placed children — learnt from class site */
     inset-block-start: 0;
     block-size: 100svh;
     display: flex;
@@ -57,7 +56,7 @@ body {
     margin-inline: auto;
 }
 
-/* === TYPOGRAPHY === */
+/* TYPOGRAPHY */
 
 .title {
     font-size: 2.2rem;
@@ -177,13 +176,17 @@ body {
 
 .card-overlay {
     position: absolute;
-    inset: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     background-color: rgba(0, 0, 0, 0.45);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.4rem;
+    padding-block: 0.4rem;
+    padding-inline: 0.4rem;
     text-align: center;
 }
 
@@ -215,13 +218,6 @@ body {
     display: block;
 }
 
-.project-card span {
-    font-size: var(--font-size-sm);
-    letter-spacing: -0.02rem;
-    text-align: center;
-    padding-block: 0.25rem;
-    background-color: var(--color-bg);
-}
 
 /* each card fans out at a different angle — like spilling out of the skull */
 #manuscript { transform: rotate(-15deg); }
@@ -250,7 +246,7 @@ body {
     opacity: 0;
 }
 
-/* === CORNER LINKS === */
+/* CORNER LINKS */
 
 .corner-link {
     position: fixed;
@@ -284,7 +280,7 @@ body {
     opacity: 1;
 }
 
-/* === CURSOR TOOLTIP — learnt from https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tooltip_role === */
+/*  CURSOR TOOLTIP — learnt from https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tooltip_role */
 
 .cursor-tooltip {
     position: fixed;
@@ -318,7 +314,7 @@ body {
     margin-block: 0;
 }
 
-/* === BETWEEN MOBILE AND DESKTOP === */
+/* BETWEEN MOBILE AND DESKTOP */
 
 @media (width < 317px){
     .bottom-half {
@@ -332,7 +328,7 @@ body {
     }
 }
 
-/* === TABLET === */
+/* Tablet commented out because its not fully responsive there, couldn't really figure out responsiveness for that part for this specific site structure*/
 
 /* @media (width > 480px) and (width < 1024px) {
     .top-half img {
@@ -414,3 +410,5 @@ body {
         margin-inline-end: -3rem;
     }
 }
+
+/* Last thing to say, there are a lot of magic numbers in this site because I was working with a lot of absolutely positioned objects and couldn't figure out a seamless structure with percentages */
